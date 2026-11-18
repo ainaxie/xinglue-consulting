@@ -406,6 +406,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .ai-head h2 { font-family: var(--display); font-size: clamp(34px, 4.3vw, 56px); font-weight: 600; line-height: 1.4; letter-spacing: -.035em; }
 .ai-head h2 span { color: var(--lime); }
 .ai-head > p { padding-bottom: 8px; color: #bac5c0; font-size: 13.5px; line-height: 2; }
+.ai-visuals { display: grid; grid-template-columns: .85fr 1.15fr; gap: 18px; margin-bottom: 44px; }
+.ai-visuals figure { position: relative; height: 230px; overflow: hidden; border: 1px solid #455850; background: #1d342d; }
+.ai-visuals img { width: 100%; height: 100%; object-fit: cover; }
+.ai-visuals figcaption { position: absolute; left: 16px; bottom: 14px; padding: 7px 10px; background: rgba(20, 46, 38, .88); color: var(--white); font-size: 10px; letter-spacing: .08em; }
 .ai-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #455850; border-bottom: 1px solid #455850; }
 .ai-card { padding: 28px 24px 32px; }
 .ai-card + .ai-card { border-left: 1px solid #455850; }
@@ -417,6 +421,15 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .ai-flow p { padding: 6px 13px; border: 1px solid #455850; font-size: 10.5px; letter-spacing: .04em; }
 .ai-flow span { color: var(--lime); font-size: 12px; }
 .ai-note { max-width: 760px; margin-top: 22px; color: #8fa098; font-size: 10.5px; line-height: 1.9; }
+.ai-commentary { margin-top: 52px; }
+.ai-commentary-head { display: flex; align-items: baseline; justify-content: space-between; gap: 30px; margin-bottom: 24px; }
+.ai-commentary-head > p { color: var(--lime); font-size: 10px; letter-spacing: .14em; white-space: nowrap; }
+.ai-commentary-head h3 { font-family: var(--display); font-size: clamp(22px, 2.5vw, 30px); font-weight: 600; line-height: 1.5; text-align: right; }
+.ai-commentary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid #455850; }
+.ai-comment { padding: 26px 0 28px; border-bottom: 1px solid #455850; }
+.ai-comment-index { color: var(--lime); font-size: 10px; letter-spacing: .08em; }
+.ai-comment h4 { margin: 12px 0 10px; font-family: var(--display); font-size: 20px; font-weight: 600; line-height: 1.5; }
+.ai-comment p { color: #b8c4be; font-size: 12.5px; line-height: 2; }
 
 /* ---------- 咨询流程 ---------- */
 .approach { background: var(--paper); }
@@ -539,6 +552,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 1120px) {
   .desktop-nav { gap: 18px; }
   .desktop-nav a { font-size: 12px; }
+  .brand-slogan { display: none; }
   .header-cta { display: none; }
   .hero-grid { gap: 26px; }
   .hero-visual { min-height: 520px; }
@@ -690,6 +704,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .client-group, .client-group + .client-group, .client-group:nth-child(even) { padding: 20px 0; border-left: 0; }
   .fit-card { padding: 24px 20px; }
   .ai-head h2 { font-size: 32px; }
+  .ai-visuals { grid-template-columns: 1fr; }
+  .ai-visuals figure { height: 210px; }
+  .ai-commentary-head { display: block; }
+  .ai-commentary-head h3 { margin-top: 12px; font-size: 24px; text-align: left; }
+  .ai-commentary-grid { grid-template-columns: 1fr; }
   .ai-grid { grid-template-columns: 1fr; }
   .ai-card { padding: 24px 0 26px; }
   .ai-card + .ai-card { border-left: 0; border-top: 1px solid #455850; }
