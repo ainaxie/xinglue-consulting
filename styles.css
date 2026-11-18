@@ -76,6 +76,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .brand-type { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-type strong { font-family: "Microsoft YaHei", "SimHei", "黑体", sans-serif; font-size: 21px; font-weight: 400; letter-spacing: .12em; }
 .brand-type small { margin-top: 5px; font-size: 8px; font-weight: 600; letter-spacing: .14em; color: var(--muted); }
+.brand-slogan { position: relative; margin-left: 8px; padding-left: 18px; font-family: var(--display); font-size: 13px; letter-spacing: .12em; color: var(--ink-soft); white-space: nowrap; }
+.brand-slogan::before { content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 24px; background: var(--line); }
 .desktop-nav { display: flex; align-items: center; gap: clamp(18px, 2.2vw, 32px); margin-left: auto; }
 .desktop-nav a { position: relative; padding: 6px 0; font-size: 13px; color: var(--ink-soft); transition: color .2s ease; }
 .desktop-nav a::after {
@@ -223,6 +225,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .heading-copy { color: var(--ink-soft); font-size: 14.5px; line-height: 2; }
 .heading-copy p + p { margin-top: 18px; }
+.about-pioneer { margin-top: 22px !important; padding: 16px 20px; border-left: 3px solid var(--forest); background: rgba(20, 46, 38, .045); color: var(--ink); font-size: 13.8px; line-height: 2; }
+.about-pioneer strong { font-family: var(--display); font-size: 15.5px; font-weight: 600; letter-spacing: .04em; color: var(--forest); }
 .services-heading { display: flex; align-items: end; justify-content: space-between; gap: 60px; }
 .services-heading > p { max-width: 420px; padding-bottom: 8px; color: var(--ink-soft); font-size: 13.5px; line-height: 2; }
 
@@ -336,11 +340,15 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .industry-body > p:not(.industry-index) { color: var(--ink-soft); font-size: 12.8px; line-height: 1.9; }
 .industry-topics { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 15px; }
 .industry-topics li { padding: 3px 8px; border: 1px solid var(--line); color: #4c5b54; font-size: 10px; }
-.industry-more { display: flex; align-items: baseline; gap: 26px; margin-top: 46px; padding-top: 20px; border-top: 1px solid var(--line); }
-.industry-more-kicker { flex-shrink: 0; color: var(--muted); font-size: 10px; letter-spacing: .12em; }
-.industry-tags-list { display: flex; flex-wrap: wrap; gap: 8px 10px; }
-.industry-tags-list li { padding: 6px 11px; border: 1px solid var(--line); font-size: 11.5px; }
-.industry-tags-list span { margin-left: 6px; color: var(--muted); font-size: 9.5px; }
+.industry-more { margin-top: 46px; padding-top: 24px; border-top: 1px solid var(--line); }
+.industry-more-kicker { margin-bottom: 18px; color: var(--muted); font-size: 10px; letter-spacing: .12em; }
+.industry-more-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.industry-more-card figure { overflow: hidden; background: #d9d5ca; }
+.industry-more-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .6s ease; }
+.industry-more-card:hover img { transform: scale(1.04); }
+.industry-more-body { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-top: 13px; }
+.industry-more-body h3 { font-family: var(--display); font-size: 17px; font-weight: 600; line-height: 1.4; }
+.industry-more-body span { flex-shrink: 0; font-size: 10.5px; color: var(--muted); white-space: nowrap; }
 .industry-note { margin-top: 26px; color: var(--muted); font-size: 11.5px; line-height: 1.9; }
 
 /* ---------- 客户与项目 ---------- */
@@ -540,6 +548,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 @media (max-width: 980px) {
   .desktop-nav { display: none; }
+  .brand-slogan { display: none; }
   .menu-toggle { display: block; margin-left: auto; }
   .header-inner { height: 76px; }
   .hero { padding-top: 116px; }
@@ -555,6 +564,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .services-heading { display: block; }
   .services-heading > p { margin-top: 22px; }
   .industry-grid { grid-template-columns: repeat(2, 1fr); }
+  .industry-more-grid { grid-template-columns: repeat(2, 1fr); }
   .logo-wall { grid-template-columns: repeat(3, 1fr); }
   .project-grid { grid-template-columns: repeat(2, 1fr); }
   .ai-head { grid-template-columns: 1fr; gap: 24px; }
